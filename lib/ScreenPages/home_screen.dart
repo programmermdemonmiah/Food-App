@@ -43,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                         onPressed: null,
                         iconSize: 30,
                         icon: CircleAvatar(
-                          backgroundImage: AssetImage('assets/images/'),
+                          backgroundImage: AssetImage('assets/images/emon.png'),
                         ),
                       ),
                     ],
