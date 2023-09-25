@@ -12,7 +12,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Food App",
       theme: ThemeData(
-
+        primarySwatch: Colors.orange,
+        scaffoldBackgroundColor: Colors.orangeAccent,
       ),
       home: const HomeScreen(),
       debugShowCheckedModeBanner: false,

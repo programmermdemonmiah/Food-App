@@ -15,6 +15,11 @@ class HomeScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
+                  Text(
+                      'Food App',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+                  SizedBox(width: 60,),
                   IconButton(onPressed: null,
                       icon: Icon(Icons.search)),
                   SizedBox(width: 20,),
