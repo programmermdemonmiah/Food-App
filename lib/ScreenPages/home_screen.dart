@@ -35,15 +35,18 @@ class HomeScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      IconButton(onPressed: null, icon: Icon(Icons.search)),
+                      IconButton(onPressed: null,
+                          iconSize: 30,
+                          icon: Icon(Icons.search)),
                       SizedBox(
-                        width: 10,
+                        width: 6,
                       ),
                       IconButton(
                         onPressed: null,
-                        iconSize: 30,
+                        iconSize: 45,
                         icon: CircleAvatar(
                           backgroundImage: AssetImage('assets/images/emon.png'),
+                          radius: 35,
                         ),
                       ),
                     ],
