@@ -1,4 +1,4 @@
-package com.example.music
+package com.mdemonmiah.foodapp.food_app
 
 import io.flutter.embedding.android.FlutterActivity
 
