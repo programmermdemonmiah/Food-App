@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -7,33 +8,45 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        margin: const EdgeInsets.only(top: 20,),
-        child: const Padding(
-          padding: EdgeInsets.only(left: 10,),
+        margin: const EdgeInsets.only(top: 25,),
+        child: Padding(
+          padding: const EdgeInsets.only(left: 15, right: 10, top: 5,),
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                textBaseline: TextBaseline.alphabetic,
                 children: [
                   Text(
                       'Food App',
-                    style: TextStyle(fontSize: 20, color: Colors.white),
+                    style: TextStyle(fontSize: 25, color: Colors.white, fontWeight: FontWeight.bold, ),
                   ),
-                  SizedBox(width: 60,),
-                  IconButton(onPressed: null,
-                      icon: Icon(Icons.search)),
-                  SizedBox(width: 20,),
-                  IconButton(onPressed: null,
-                      iconSize: 30,
-                      icon: CircleAvatar(
-                        backgroundImage: AssetImage('assets/images/'),
+                  // SizedBox(width: 80,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      IconButton(onPressed: null,
+                          icon: Icon(Icons.search)),
+                      SizedBox(width: 10,),
+                      IconButton(onPressed: null,
+                        iconSize: 30,
+                        icon: CircleAvatar(
+                          backgroundImage: AssetImage('assets/images/'),
+                        ),
                       ),
-                  ),
+                    ],
+                  )
                   // CircleAvatar(
                   //   backgroundImage: AssetImage('assets/images/'),
                   // ),
+
                 ],
               ),
+              Padding(
+                padding:const EdgeInsets.only(right: 7,),
+                child:Container(
+                  height:0.5,
+                  color:Colors.white70,),),
             ],
           ),
         ),
