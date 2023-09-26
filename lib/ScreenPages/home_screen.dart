@@ -84,6 +84,7 @@ class HomeScreen extends StatelessWidget {
                           indicatorBgPadding: 5.0,
                           dotBgColor: Colors.purple.withOpacity(0.5),
                           borderRadius: true,
+                          boxFit: BoxFit.cover,
                         )
                     ),
                   ),
