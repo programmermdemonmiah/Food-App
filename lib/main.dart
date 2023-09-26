@@ -33,40 +33,72 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int selectedIndex = 0;
+  int selectedIndex = 2;
   List<Widget> widgetList = const [
-    HomeScreen(),
-    MessageScreen(),
     FavouriteScreen(),
     OrdersScreen(),
+    HomeScreen(),
+    MessageScreen(),
     ReportScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar:
+      // NavigationBarTheme(
+      //   data: const NavigationBarThemeData(
+      //
+      //     labelTextStyle: MaterialStatePropertyAll(
+      //       TextStyle(fontSize: 14, fontWeight: FontWeight.w500,),
+      //     ),
+      //   ),
+      //   child: NavigationBar(
+      //     height: 60,
+      //     backgroundColor: const Color(0xFFf1f5fb),
+      //       // onDestinationSelected: (index) {
+      //       // setState(() {
+      //       //   selectedIndex = index;
+      //       // });
+      //       // } ,
+      //       onDestinationSelected: (index) => setState(() {
+      //         selectedIndex = index;
+      //       }),
+      //       destinations: const [
+      //         NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+      //         NavigationDestination(icon: Icon(Icons.message_outlined), label: 'Messages'),
+      //         NavigationDestination(icon: Icon(Icons.favorite_border), label: "Favourites"),
+      //         NavigationDestination(icon: Icon(Icons.shopping_cart), label: "Orders"),
+      //         NavigationDestination(icon: Icon(Icons.feedback_outlined), label: 'Report'),
+      //       ]
+      //   ),
+      // ),
+      BottomNavigationBar(
           // showSelectedLabels: false,
           showUnselectedLabels: false,
           // backgroundColor: Colors.white,
           type: BottomNavigationBarType.fixed,
-          onTap: (index) {
-            setState(() {
-              selectedIndex = index;
-            });
-          },
+          // onTap: (index) {
+          //   setState(() {
+          //     selectedIndex = index;
+          //   });
+          // },
+          currentIndex: selectedIndex,
+          onTap: (index) => setState(() {
+            selectedIndex = index;
+          }),
           // unselectedItemColor: Colors.indigoAccent,
           // selectedItemColor: Colors.green,
 
           items: const [
             BottomNavigationBarItem(
-                icon: Icon(Icons.home_filled), label: 'Home'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.messenger), label: 'Messages'),
-            BottomNavigationBarItem(
                 icon: Icon(Icons.favorite), label: 'Favourites'),
             BottomNavigationBarItem(
                 icon: Icon(Icons.shopping_cart), label: 'Orders'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.home_filled), label: 'Home'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.messenger), label: 'Messages'),
             BottomNavigationBarItem(
                 icon: Icon(Icons.feedback_outlined), label: 'Report'),
           ]),
