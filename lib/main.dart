@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         primarySwatch: Colors.orange,
-        scaffoldBackgroundColor: Colors.orangeAccent,
+        scaffoldBackgroundColor: Colors.orangeAccent.withOpacity(0.5),
       ),
       home: const HomeScreen(),
       debugShowCheckedModeBanner: false,

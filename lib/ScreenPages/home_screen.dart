@@ -80,9 +80,9 @@ class HomeScreen extends StatelessWidget {
                           ],
                           dotSize: 4.0,
                           dotSpacing: 15.0,
-                          // dotColor: Colors.lightGreenAccent,
-                          // indicatorBgPadding: 5.0,
-                          // dotBgColor: Colors.purple.withOpacity(0.5),
+                          dotColor: Colors.lightGreenAccent,
+                          indicatorBgPadding: 5.0,
+                          dotBgColor: Colors.purple.withOpacity(0.5),
                           borderRadius: true,
                         )
                     ),
