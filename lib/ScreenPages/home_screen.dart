@@ -10,18 +10,19 @@ class HomeScreen extends StatelessWidget {
       // ==== Bottom Navigation bar===============
       bottomNavigationBar: BottomNavigationBar(
         // currentIndex: _selectedIndex,
+        backgroundColor: null,
           unselectedItemColor: Colors.indigoAccent,
-          selectedItemColor: Colors.white,
+          selectedItemColor: Colors.green,
           onTap: (int index){
             // setState(() {
             //   _selectedIndex = Index;
             // });
           },
           items: const[
-            BottomNavigationBarItem(icon: Icon(Icons.favorite_outline_sharp), label: 'Favourites'),
-            BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: 'Orders'),
             BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: 'Home',),
             BottomNavigationBarItem(icon: Icon(Icons.messenger), label: 'Messages'),
+            BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Favourites'),
+            BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: 'Orders'),
             BottomNavigationBarItem(icon: Icon(Icons.feedback_outlined), label: 'Report'),
           ]
       ),
@@ -87,25 +88,35 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 6,),
               Expanded(
                   child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: SizedBox(
-                        height: 200.0,
-                        width: 350.0,
-                        child: AnotherCarousel(
-                          images: const [
-                            AssetImage('assets/images/emon.png'),
-                            // NetworkImage('https://cdn-images-1.medium.com/max/2000/1*GqdzzfB_BHorv7V2NV7Jgg.jpeg'),
-                            // NetworkImage('https://cdn-images-1.medium.com/max/2000/1*wnIEgP1gNMrK5gZU7QS0-A.jpeg'),
+                    scrollDirection: Axis.vertical,
+                    child: Column(
+                      children: [
+                        SizedBox(
+                            height: 230.0,
+                            width: double.infinity,
+                            child: AnotherCarousel(
+                              images: const [
+                                AssetImage('assets/images/emon.png',),
+                                AssetImage('assets/images/emon.png'),
+                                // NetworkImage('https://cdn-images-1.medium.com/max/2000/1*GqdzzfB_BHorv7V2NV7Jgg.jpeg'),
+                                // NetworkImage('https://cdn-images-1.medium.com/max/2000/1*wnIEgP1gNMrK5gZU7QS0-A.jpeg'),
+                              ],
+                              dotSize: 4.0,
+                              dotSpacing: 15.0,
+                              dotColor: Colors.lightGreenAccent,
+                              indicatorBgPadding: 5.0,
+                              dotBgColor: Colors.purple.withOpacity(0.5),
+                              borderRadius: true,
+                            )
+                        ),
+                        const SizedBox(height: 6,),
+                        const Row(
+                          children: [
+
                           ],
-                          dotSize: 4.0,
-                          dotSpacing: 15.0,
-                          dotColor: Colors.lightGreenAccent,
-                          indicatorBgPadding: 5.0,
-                          dotBgColor: Colors.purple.withOpacity(0.5),
-                          borderRadius: true,
-                          boxFit: BoxFit.cover,
                         )
-                    ),
+                      ],
+                    )
                   ),
               ),
             ],
