@@ -3,10 +3,29 @@ import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
-
+  // int _selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // ==== Bottom Navigation bar===============
+      bottomNavigationBar: BottomNavigationBar(
+        // currentIndex: _selectedIndex,
+          unselectedItemColor: Colors.indigoAccent,
+          selectedItemColor: Colors.white,
+          onTap: (int index){
+            // setState(() {
+            //   _selectedIndex = Index;
+            // });
+          },
+          items: const[
+            BottomNavigationBarItem(icon: Icon(Icons.favorite_outline_sharp), label: 'Favourites'),
+            BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: 'Orders'),
+            BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: 'Home',),
+            BottomNavigationBarItem(icon: Icon(Icons.messenger), label: 'Messages'),
+            BottomNavigationBarItem(icon: Icon(Icons.feedback_outlined), label: 'Report'),
+          ]
+      ),
+    //======body start ==============
       body: Container(
         margin: const EdgeInsets.only(
           top: 25,
@@ -75,8 +94,8 @@ class HomeScreen extends StatelessWidget {
                         child: AnotherCarousel(
                           images: const [
                             AssetImage('assets/images/emon.png'),
-                            NetworkImage('https://cdn-images-1.medium.com/max/2000/1*GqdzzfB_BHorv7V2NV7Jgg.jpeg'),
-                            NetworkImage('https://cdn-images-1.medium.com/max/2000/1*wnIEgP1gNMrK5gZU7QS0-A.jpeg'),
+                            // NetworkImage('https://cdn-images-1.medium.com/max/2000/1*GqdzzfB_BHorv7V2NV7Jgg.jpeg'),
+                            // NetworkImage('https://cdn-images-1.medium.com/max/2000/1*wnIEgP1gNMrK5gZU7QS0-A.jpeg'),
                           ],
                           dotSize: 4.0,
                           dotSpacing: 15.0,
@@ -93,6 +112,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
+
     );
   }
 }
