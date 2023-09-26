@@ -3,29 +3,29 @@ import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
-  // int _selectedIndex = 0;
+
+  // int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       // ==== Bottom Navigation bar===============
-      bottomNavigationBar: BottomNavigationBar(
-        // currentIndex: _selectedIndex,
-        backgroundColor: null,
-          unselectedItemColor: Colors.indigoAccent,
-          selectedItemColor: Colors.green,
-          onTap: (int index){
-            // setState(() {
-            //   _selectedIndex = Index;
-            // });
-          },
-          items: const[
-            BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: 'Home',),
-            BottomNavigationBarItem(icon: Icon(Icons.messenger), label: 'Messages'),
-            BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Favourites'),
-            BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: 'Orders'),
-            BottomNavigationBarItem(icon: Icon(Icons.feedback_outlined), label: 'Report'),
-          ]
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   backgroundColor: null,
+      //     unselectedItemColor: Colors.indigoAccent,
+      //     selectedItemColor: Colors.green,
+      //     onTap: (index){
+      //       setState(() {
+      //         selectedIndex = Index;
+      //       });
+      //     },
+      //     items: const[
+      //       BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: 'Home',),
+      //       BottomNavigationBarItem(icon: Icon(Icons.messenger), label: 'Messages'),
+      //       BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Favourites'),
+      //       BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: 'Orders'),
+      //       BottomNavigationBarItem(icon: Icon(Icons.feedback_outlined), label: 'Report'),
+      //     ]
+      // ),
     //======body start ==============
       body: Container(
         margin: const EdgeInsets.only(
@@ -96,16 +96,19 @@ class HomeScreen extends StatelessWidget {
                             width: double.infinity,
                             child: AnotherCarousel(
                               images: const [
-                                AssetImage('assets/images/emon.png',),
-                                AssetImage('assets/images/emon.png'),
-                                // NetworkImage('https://cdn-images-1.medium.com/max/2000/1*GqdzzfB_BHorv7V2NV7Jgg.jpeg'),
-                                // NetworkImage('https://cdn-images-1.medium.com/max/2000/1*wnIEgP1gNMrK5gZU7QS0-A.jpeg'),
+                                AssetImage('assets/images/slider1.jpg',),
+                                AssetImage('assets/images/slider2.jpg'),
+                                AssetImage('assets/images/slider3.jpeg'),
+                                AssetImage('assets/images/slider4.jpg'),
+                                AssetImage('assets/images/slider5.jpg'),
+                                AssetImage('assets/images/slider1.jpg'),
+                                AssetImage('assets/images/slider7.jpg'),
                               ],
                               dotSize: 4.0,
                               dotSpacing: 15.0,
                               dotColor: Colors.lightGreenAccent,
                               indicatorBgPadding: 5.0,
-                              dotBgColor: Colors.purple.withOpacity(0.5),
+                              dotBgColor: Colors.redAccent.withOpacity(0.4),
                               borderRadius: true,
                             )
                         ),
