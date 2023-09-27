@@ -102,7 +102,7 @@ class HomeScreen extends StatelessWidget {
                                 AssetImage('assets/images/slider4.jpg'),
                                 AssetImage('assets/images/slider5.jpg'),
                                 AssetImage('assets/images/slider1.jpg'),
-                                AssetImage('assets/images/slider7.jpg'),
+                                AssetImage('assets/images/slider6.jpeg'),
                               ],
                               dotSize: 4.0,
                               dotSpacing: 15.0,
