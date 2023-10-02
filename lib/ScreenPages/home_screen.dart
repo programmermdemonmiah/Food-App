@@ -1,10 +1,11 @@
 import 'package:another_carousel_pro/another_carousel_pro.dart';
 import 'package:flutter/material.dart';
 
+bool isShowMore = false;
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
-  // int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +27,7 @@ class HomeScreen extends StatelessWidget {
       //       BottomNavigationBarItem(icon: Icon(Icons.feedback_outlined), label: 'Report'),
       //     ]
       // ),
-    //======body start ==============
+      //======body start ==============
       body: Container(
         margin: const EdgeInsets.only(
           top: 25,
@@ -39,34 +40,41 @@ class HomeScreen extends StatelessWidget {
           ),
           child: Column(
             children: [
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 textBaseline: TextBaseline.alphabetic,
                 children: [
-                  Text(
-                    'Food App',
-                    style: TextStyle(
-                      fontSize: 25,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
+                   InkWell(
+                     onTap: () {},
+                     child: const Text(
+                      'Food App',
+                      style: TextStyle(
+                        fontSize: 25,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
                   ),
+                   ),
                   // SizedBox(width: 80,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      IconButton(onPressed: null,
+                      IconButton(
+                          onPressed: (){},
                           iconSize: 30,
-                          icon: Icon(Icons.search)),
-                      SizedBox(
+                          icon: const Icon(Icons.search)),
+                      const SizedBox(
                         width: 6,
                       ),
-                      IconButton(
-                        onPressed: null,
-                        iconSize: 45,
-                        icon: CircleAvatar(
-                          backgroundImage: AssetImage('assets/images/emon.png'),
-                          radius: 35,
+                      InkWell(
+                        onTap: () {},
+                        child: const IconButton(
+                          onPressed: null,
+                          iconSize: 45,
+                          icon: CircleAvatar(
+                            backgroundImage: AssetImage('assets/images/emon.png'),
+                            radius: 35,
+                          ),
                         ),
                       ),
                     ],
@@ -85,9 +93,11 @@ class HomeScreen extends StatelessWidget {
                   color: Colors.white70,
                 ),
               ),
-              const SizedBox(height: 6,),
+              const SizedBox(
+                height: 6,
+              ),
               Expanded(
-                  child: SingleChildScrollView(
+                child: SingleChildScrollView(
                     scrollDirection: Axis.vertical,
                     child: Column(
                       children: [
@@ -96,7 +106,9 @@ class HomeScreen extends StatelessWidget {
                             width: double.infinity,
                             child: AnotherCarousel(
                               images: const [
-                                AssetImage('assets/images/slider1.jpg',),
+                                AssetImage(
+                                  'assets/images/slider1.jpg',
+                                ),
                                 AssetImage('assets/images/slider2.jpg'),
                                 AssetImage('assets/images/slider3.jpeg'),
                                 AssetImage('assets/images/slider4.jpg'),
@@ -110,23 +122,58 @@ class HomeScreen extends StatelessWidget {
                               indicatorBgPadding: 5.0,
                               dotBgColor: Colors.redAccent.withOpacity(0.4),
                               borderRadius: true,
-                            )
+                            )),
+                        const SizedBox(
+                          height: 6,
                         ),
-                        const SizedBox(height: 6,),
-                        const Row(
+                        const Column(
                           children: [
+                            Text('Fast Foods', style: TextStyle(fontSize: 30, fontWeight: FontWeight.w800),),
+                            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SizedBox(
+                                  width: 120,
+                                  child: Column(
+                                    children: [
+                                      Image(image: AssetImage('assets/images/slider1.jpg'),fit: BoxFit.fill),
+                                      Text('Burger'),
+                                      Text('Price: 100'),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(width: 120,
+                                  child: Column(
+                                    children: [
+                                      Image(image: AssetImage('assets/images/slider1.jpg'), fit: BoxFit.fill),
+                                      Text('Burger'),
+                                      Text('Price: 100'),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox( width: 120,
+                                  child: Column(
+                                    children: [
+                                      Image(image: AssetImage('assets/images/slider1.jpg'), fit: BoxFit.fill),
+                                      Text('Burger'),
+                                      Text('Price: 100'),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 4,),
 
+                            SizedBox(height: 4,),
                           ],
-                        )
+                        ),
                       ],
-                    )
-                  ),
+                    )),
               ),
+
             ],
           ),
         ),
       ),
-
     );
   }
 }

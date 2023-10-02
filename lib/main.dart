@@ -34,7 +34,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int selectedIndex = 2;
-  List<Widget> widgetList = const [
+  List<Widget> screenList = const [
     FavouriteScreen(),
     OrdersScreen(),
     HomeScreen(),
@@ -102,7 +102,7 @@ class _HomeState extends State<Home> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.feedback_outlined), label: 'Report'),
           ]),
-      body: widgetList[selectedIndex],
+      body: screenList[selectedIndex],
     );
   }
 }
